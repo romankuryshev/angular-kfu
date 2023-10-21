@@ -13,12 +13,18 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { DemoMaterialModule } from './demo-material.module';
+import { AdminComponent } from './components/admin/admin.component';
+import { NotAccessComponent } from './component/not-access/not-access.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SecondComponent
+    SecondComponent,
+    AdminComponent,
+    NotAccessComponent,
+    NavbarComponent
   ],
   imports: [
     HttpClientModule,

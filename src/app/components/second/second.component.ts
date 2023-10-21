@@ -1,15 +1,20 @@
 import { Component } from '@angular/core';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import {Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivateFn} from '@angular/router'
 
 @Component({
   selector: 'app-second',
   templateUrl: './second.component.html',
-  styleUrls: ['./second.component.scss']
+  styleUrls: ['./second.component.css']
 })
 export class SecondComponent {
-  constructor(private aythService : AuthenticationService) {}
+  constructor(private router: Router, private authService : AuthenticationService) {}
 
   logout () {
-    this.aythService.logout();
+    this.authService.logout();
   }
-}
+
+  onClick() {
+    this.router.navigate(['/admin']);
+  }
+} 
